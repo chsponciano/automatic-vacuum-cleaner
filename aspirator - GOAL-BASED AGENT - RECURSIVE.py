@@ -88,8 +88,8 @@ _agent_x = 1
 _counter_dirts = 0
 
 # assemble random scenario, 6x6 matrix - 0 = clean | 1 = wall |  2 = dirty
-_scenario = [[get_cell() if column % _LIMIT_MAX != 0 and line % _LIMIT_MAX != 0 and (_counter_dirts == 0 or not(_counter_dirts % 11 == 0)) \
-     else 1 for column in range(0, _LIMIT_MAX + 1)] for line in range(0, _LIMIT_MAX + 1)]
+_scenario = [[get_cell() if column % _LIMIT_MAX != 0 and line % _LIMIT_MAX != 0 and (_counter_dirts == 0  \
+    or not(_counter_dirts % 11 == 0)) else 1 for column in range(0, _LIMIT_MAX + 1)] for line in range(0, _LIMIT_MAX + 1)]
 
 # Scan Continuity Control Variable
 _not_clean = True
